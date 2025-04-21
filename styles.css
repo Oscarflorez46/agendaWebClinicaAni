@@ -1,0 +1,120 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+   
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  
+  }
+  
+  input, select, button {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #0dce47;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #5ddf98;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  .success-message {
+    color: green;
+    text-align: center;
+  }
+  
+  /* Estilos para el calendario */
+  #calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .day:hover {
+    background-color: #eee;
+  }
+  .day.selected {
+    background-color: #0dce47;
+    color: #fff;
+  }
+  /* Estilos para el encabezado y logo */
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #logo {
+    width: 80px; /* Ajusta el tamaño según tu diseño */
+    height: auto;
+  }
+  body {
+    /* Ruta relativa a la imagen de fondo */
+    background-image:url('imagenes/fondo2.png');
+    /* Asegura que la imagen ocupe toda el área del viewport */
+    background-size: cover;
+    
+    /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
+    
+    /* Centrar la imagen */
+    background-position: center center;
+    
+    /* Fijar la imagen para que no se mueva al hacer scroll (opcional) */
+    background-attachment: fixed;
+    
+    /* Otros estilos */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+    

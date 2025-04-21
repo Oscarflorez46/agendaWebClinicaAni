@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Clínica Ani</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src=imagenes/logo.png alt="Logo Clínica Ani" id="logo">
+        <h1>Clínica Ani</h1>
+      </header>
+  <div class="container">
+    <h1>Panel de Paciente</h1>
+    
+    <!-- Sección para Agendar una Cita -->
+    <div id="appointmentFormContainer">
+      <h2>Agendar una Cita</h2>
+      <form id="appointmentForm">
+        <label for="medico">Selecciona Médico:</label>
+        <select id="medico" name="medico">
+            <option value="dr-perez">Dr. Miguel Pérez</option>
+            <option value="dr-martinez">Dr. Marta Martínez</option>
+            <option value="dr-garcia">Dr. Juan García</option>
+            <option value="dr-florez">Dr. Oscar Flórez</option>
+            <option value="dr-ararat">Dr. Alejandra Ararat</option>
+        </select>
+        
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="time">Hora:</label>
+        <input type="time" id="time" name="time" required>
+        
+        <button type="submit">Agendar Cita</button>
+      </form>
+      <div id="appointmentMessage" class="success-message"></div>
+    </div>
+    
+    <!-- Sección de Filtros para Citas -->
+    <div id="filters">
+      <h2>Filtrar Citas</h2>
+      <label for="doctorFilter">Filtrar por Médico:</label>
+      <select id="doctorFilter">
+        <option value="">Todos</option>
+        <option value="dr-perez">Dr. Miguel Pérez</option>
+        <option value="dr-martinez">Dr. Marta Martínez</option>
+        <option value="dr-garcia">Dr. Juan García</option>
+        <option value="dr-florez">Dr. Oscar Flórez</option>
+        <option value="dr-ararat">Dr. Alejandra Ararat</option>
+      </select>
+      
+      <label for="specialtyFilter">Filtrar por Especialidad:</label>
+      <select id="specialtyFilter">
+        <option value="">Todos</option>
+        <option value="Neurología">Neurología</option>
+        <option value="Psicologia">Psicología</option>
+        <option value="TerapiaOcupacional">Terapia ocupacional</option>
+        <option value="Fonoaudiología">Fonoaudiología</option>
+        <option value="TerapiaFisica">Terapia Física</option>
+      </select>
+    </div>
+    
+    <!-- Sección para Mostrar Citas Programadas -->
+    <div id="appointmentList">
+      <h2>Citas Programadas</h2>
+      <table id="appointmentTable">
+        <thead>
+          <tr>
+            <th>Médico</th>
+            <th>Especialidad</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Se llenará dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+    
+    <button id="logoutBtn">Cerrar Sesión</button>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
